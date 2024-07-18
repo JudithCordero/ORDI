@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 228, 225, 0.8); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form div input, form div button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form div button {
+    background-color: #3ecf43; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form div button:hover {
+    background-color: #2e8532; 
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}

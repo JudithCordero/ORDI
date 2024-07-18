@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Turno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar">
+            <ul>
+               <a href="{{ url_for('login_admin') }}">Login Administrador</a></li>
+               <a href="{{ url_for('login_cliente') }}">Login Cliente</a></li>
+               <a href="{{ url_for('home') }}">Home</a></li>
+           </ul>
+       </div>
+    </div>
+
+    <div class="content">
+        <h1>Bienvenido a la página de Ticket de Turno</h1>
+        <p>En esta página puedes hacer tickets de turno para realizar trámites de:</p>
+        <ul>
+            <li>Escuelas Primarias</li>
+            <li>Escuelas Secundarias</li>
+            <li>Preparatorias</li>
+            <li>Universidades</li>
+        </ul>
+        <p>Que también se divide en los municipios de:</p>
+        <ul>
+            <li>Saltillo</li>
+            <li>Arteaga</li>
+            <li>Ramos Arizpe</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Ticket de Turno. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

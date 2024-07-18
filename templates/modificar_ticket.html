@@ -1,0 +1,45 @@
+<!-- modificar_ticket.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modificar_ticket.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Encabezado opcional si lo necesitas -->
+    </header>
+
+    <div class="container">
+        <h1>Modificar Ticket</h1>
+        <!-- Lista de tickets -->
+        <ul>
+            {% for ticket in tickets %}
+            <li>
+                <p>Nombre Completo: {{ ticket.nombre_completo }}</p>
+                <p>CURP: {{ ticket.curp }}</p>
+                <p>Teléfono: {{ ticket.telefono }}</p>
+                <p>Celular: {{ ticket.celular }}</p>
+                <p>Correo: {{ ticket.correo }}</p>
+                <p>Nivel: {{ ticket.nivel }}</p>
+                <p>Municipio: {{ ticket.municipio }}</p>
+                <p>Asunto: {{ ticket.asunto }}</p>
+                <p>Número de Turno: {{ ticket.turno_numero }}</p>
+                <p>Fecha de Registro: {{ ticket.fecha_registro }}</p>
+                <!-- Agregar más campos según sea necesario -->
+                <a href="{{ url_for('editar_ticket', ticket_id=ticket.id) }}" class="btn btn-primary">Modificar</a>
+                <form action="{{ url_for('eliminar_ticket', ticket_id=ticket.id) }}" method="post">
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+                <hr>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Scripts opcionales si necesitas JavaScript específico -->
+
+</body>
+</html>

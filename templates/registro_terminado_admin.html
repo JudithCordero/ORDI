@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Terminado</title>
+</head>
+<body>
+    <h1>Registro de Ticket Completado</h1>
+    <p>Se ha registrado correctamente. Este es su numero de turno {{ ticket.id }}</p>
+    <p>Nombre Completo: {{ ticket.nombre_completo }}</p>
+    <!-- Aquí otros detalles del ticket que desees mostrar -->
+    
+    <!-- Si tienes un formulario que requiere el ID del ticket, asegúrate de incluirlo -->
+    <form action="/generar_pdf" method="POST">
+        <input type="hidden" name="ticket_id" value="{{ ticket.id }}">
+        <button type="submit">Descargar PDF del Ticket</button>
+    </form>
+</body>
+</html>

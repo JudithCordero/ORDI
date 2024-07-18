@@ -1,0 +1,51 @@
+<!-- editar_ticket.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modificar_ticket.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Encabezado opcional si lo necesitas -->
+    </header>
+
+    <div class="container">
+        <h1>Editar Ticket</h1>
+        <form action="{{ url_for('editar_ticket', ticket_id=ticket.id) }}" method="post">
+            <label for="nombre_completo">Nombre Completo:</label>
+            <input type="text" id="nombre_completo" name="nombre_completo" value="{{ ticket.nombre_completo }}" required>
+            
+            <label for="curp">CURP:</label>
+            <input type="text" id="curp" name="curp" value="{{ ticket.curp }}" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" value="{{ ticket.telefono }}">
+
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" value="{{ ticket.celular }}">
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" value="{{ ticket.correo }}">
+
+            <label for="nivel">Nivel:</label>
+            <input type="text" id="nivel" name="nivel" value="{{ ticket.nivel }}">
+
+            <label for="municipio">Municipio:</label>
+            <input type="text" id="municipio" name="municipio" value="{{ ticket.municipio }}">
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" value="{{ ticket.asunto }}">
+            
+            <!-- Agrega más campos según sea necesario -->
+
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </form>
+    </div>
+
+    <!-- Scripts opcionales si necesitas JavaScript específico -->
+
+</body>
+</html>

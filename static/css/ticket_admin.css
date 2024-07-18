@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; 
+}
+
+.container {
+    background-color: #ffffff; 
+    max-width: 600px; 
+    margin: 50px auto; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-25 {
+    flex: 0 0 100%; 
+}
+
+.col-75 {
+    flex: 0 0 100%; 
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.boton_ticket {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.boton_ticket:hover {
+    background-color: #45a049; 
+}
+
+header {
+    background-color: #f7f7f7; 
+    padding: 10px 0;
+}
+
+.header-buttons {
+    max-width: 600px; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.header-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50; 
+    color: white;
+    font-size: 14px;
+}
+
+.header-buttons button:hover {
+    background-color: #45a049; 
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 90%; 
+        margin: 30px auto; 
+        padding: 15px; 
+    }
+
+    .col-25,
+    .col-75 {
+        flex: 0 0 100%; 
+    }
+
+    .header-buttons {
+        max-width: 100%; 
+        justify-content: center; 
+    }
+}

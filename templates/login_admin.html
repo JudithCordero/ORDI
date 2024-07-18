@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_admin.css') }}">
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Administrador</h2>
+        <form method="POST" action="{{ url_for('login_admin') }}">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.usuario.label }}<br>
+                {{ form.usuario(size=32) }}
+            </div>
+            <div>
+                {{ form.contrasena.label }}<br>
+                {{ form.contrasena(size=32) }}
+            </div>
+            <div class="h-captcha" data-sitekey="1b5cdb98-b618-4802-b878-540a15ceefd2"></div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
